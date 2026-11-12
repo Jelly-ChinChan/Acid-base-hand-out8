@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>【展氏新解】鹽類的酸鹼性與水解計算特訓</title>
+  <title>【展氏新解】鹽類的酸鹼性與水解計算</title>
   <style>
     :root {
       --bg-board: #142c1f;
@@ -17,6 +17,8 @@
       --chalk-orange: #fdba74;
       --chalk-green: #86efac;
       --chalk-red: #f87171;
+      --chalk-pink: #f472b6;
+      --chalk-purple: #c084fc;
       --highlight-bg: rgba(253, 224, 71, 0.18);
       --section-box-bg: rgba(0, 0, 0, 0.22);
       --reaction-bg: rgba(0, 0, 0, 0.35);
@@ -44,6 +46,8 @@
       --chalk-orange: #c2410c;
       --chalk-green: #15803d;
       --chalk-red: #b91c1c;
+      --chalk-pink: #db2777;
+      --chalk-purple: #7c3aed;
       --highlight-bg: #fef3c7;
       --section-box-bg: #f1f5f9;
       --reaction-bg: #e2e8f0;
@@ -411,7 +415,7 @@
   <div class="toolbar">
     <div class="toolbar-title-wrap">
       <span class="brand-tag">展氏新解</span>
-      <span class="toolbar-title">鹽類的酸鹼性與水解計算特訓</span>
+      <span class="toolbar-title">鹽類的酸鹼性與水解計算</span>
     </div>
     <div class="btn-group">
       <button class="btn btn-primary" onclick="openQuiz()">📝 進入隨堂測驗</button>
@@ -427,7 +431,7 @@
     <div class="board-header">
       <div class="main-title-wrap">
         <span class="brand-tag" style="font-size:0.95rem; padding:3px 8px;">展氏新解</span>
-        <h1>鹽類的酸鹼性與水解計算特訓</h1>
+        <h1>鹽類的酸鹼性與水解計算</h1>
         <span class="badge-pill">強酸強鹼類別 · 正鹽水解機制 · 碳酸鈉與酸式鹽 NaHS 計算</span>
       </div>
     </div>
@@ -446,20 +450,20 @@
           <div class="sub-head">1. 四大酸鹼組合分類</div>
           <div style="font-size: 0.8rem; line-height: 1.55; display: flex; flex-direction: column; gap: 6px;">
             <div style="background: rgba(0,0,0,0.25); padding: 5px; border-radius: 4px;">
-              • <b>強鹼 ＋ 強酸</b> → <span style="color:var(--chalk-green);">中性鹽 (pH＝7)</span><br>
-              　例：NaOH ＋ HCl → <span class="cloze" style="color:var(--chalk-yellow);">NaCl (pH＝7)</span><br>
-              　例：KOH ＋ <span class="cloze">HNO<sub>3</sub></span> → KNO<sub>3</sub> (pH＝7)
+              • <b>強鹼 ＋ 強酸</b> → <span style="color:var(--chalk-green);">中性鹽 (<span style="color:var(--chalk-green);">pH＝7</span>)</span><br>
+              　例：NaOH ＋ HCl → <span class="cloze" style="color:var(--chalk-yellow);">NaCl (<span style="color:var(--chalk-green);">pH＝7</span>)</span><br>
+              　例：KOH ＋ <span class="cloze">HNO<sub>3</sub></span> → KNO<sub>3</sub> (<span style="color:var(--chalk-green);">pH＝7</span>)
             </div>
             <div style="background: rgba(0,0,0,0.25); padding: 5px; border-radius: 4px;">
-              • <b>弱鹼 ＋ 強酸</b> → <span style="color:var(--chalk-cyan);">酸性鹽 (pH＜7)</span><br>
-              　例：NH<sub>3</sub> ＋ HCl → <span class="cloze" style="color:var(--chalk-yellow);">NH<sub>4</sub>Cl (pH＜7)</span>
+              • <b>弱鹼 ＋ 強酸</b> → <span style="color:var(--chalk-pink);">酸性鹽 (<span style="color:var(--chalk-pink);">pH＜7</span>)</span><br>
+              　例：NH<sub>3</sub> ＋ HCl → <span class="cloze" style="color:var(--chalk-yellow);">NH<sub>4</sub>Cl (<span style="color:var(--chalk-pink);">pH＜7</span>)</span>
             </div>
             <div style="background: rgba(0,0,0,0.25); padding: 5px; border-radius: 4px;">
-              • <b>強鹼 ＋ 弱酸</b> → <span style="color:var(--chalk-orange);">鹼性鹽 (pH＞7)</span><br>
-              　例：NaOH ＋ HF → <span class="cloze" style="color:var(--chalk-yellow);">NaF (pH＞7)</span>
+              • <b>強鹼 ＋ 弱酸</b> → <span style="color:var(--chalk-cyan);">鹼性鹽 (<span style="color:var(--chalk-cyan);">pH＞7</span>)</span><br>
+              　例：NaOH ＋ HF → <span class="cloze" style="color:var(--chalk-yellow);">NaF (<span style="color:var(--chalk-cyan);">pH＞7</span>)</span>
             </div>
             <div style="background: rgba(0,0,0,0.25); padding: 5px; border-radius: 4px;">
-              • <b>弱鹼 ＋ 弱酸</b> → <span style="color:var(--chalk-yellow);">？性鹽 (如 CH<sub>3</sub>COONH<sub>4</sub>，<span style="color:var(--chalk-cyan);">需比較酸的 Ka 與鹼的 Kb</span>)</span>
+              • <b>弱鹼 ＋ 弱酸</b> → <span style="color:var(--chalk-yellow);">？性鹽 (如 CH<sub>3</sub>COONH<sub>4</sub>，<span style="color:var(--chalk-purple); font-weight: bold;">需比較酸的 Ka 與鹼的 Kb</span>)</span>
             </div>
           </div>
         </div>
@@ -493,26 +497,26 @@
           <div class="sub-head" style="color: var(--chalk-yellow);">1. 計算 0.1 M NH<sub>4</sub>Cl 的 [H<sup>+</sup>]</div>
           <div style="font-size: 0.79rem; line-height: 1.5;">
             • 已知 NH<sub>3</sub> 之 <i>K</i><sub>b</sub> ＝ 10<sup>-5</sup>。<br>
-            • <b>判斷酸性</b>：NH<sub>4</sub>Cl 來自弱鹼 NH<sub>3</sub> ＋ 強酸 HCl → <span style="color:var(--chalk-cyan);">酸性鹽</span>。<br>
+            • <b>判斷酸性</b>：NH<sub>4</sub>Cl 來自弱鹼 NH<sub>3</sub> ＋ 強酸 HCl → <span style="color:var(--chalk-pink);">酸性鹽</span>。<br>
             • <b>計算公式推導</b>：<br>
             　<i>K</i><sub>h</sub> ＝ <i>K</i><sub>w</sub> / <i>K</i><sub>b</sub> ＝ 10<sup>-14</sup> / 10<sup>-5</sup> ＝ 10<sup>-9</sup><br>
             　[H<sup>+</sup>] ＝ <span class="cloze" style="color:var(--chalk-yellow); font-weight:bold;">√(<i>c</i> · <i>K</i><sub>h</sub>) ＝ √(0.1 × 10<sup>-9</sup>) ＝ 10<sup>-5</sup> M</span> (pH＝5)
           </div>
         </div>
 
-        <div class="section-box" style="border-left-color: var(--chalk-orange);">
-          <div class="sub-head" style="color: var(--chalk-orange);">2. 計算 0.1 M NaF 的 [OH<sup>-</sup>]</div>
+        <div class="section-box" style="border-left-color: var(--chalk-cyan);">
+          <div class="sub-head" style="color: var(--chalk-cyan);">2. 計算 0.1 M NaF 的 [OH<sup>-</sup>]</div>
           <div style="font-size: 0.79rem; line-height: 1.5;">
             • 已知 HF 之 <i>K</i><sub>a</sub> ＝ 10<sup>-3</sup>。<br>
-            • <b>判斷鹼性</b>：NaF 來自強鹼 NaOH ＋ 弱酸 HF → <span style="color:var(--chalk-orange);">鹼性鹽</span>。<br>
+            • <b>判斷鹼性</b>：NaF 來自強鹼 NaOH ＋ 弱酸 HF → <span style="color:var(--chalk-cyan);">鹼性鹽</span>。<br>
             • <b>計算公式推導</b>：<br>
             　<i>K</i><sub>h</sub> ＝ <i>K</i><sub>w</sub> / <i>K</i><sub>a</sub> ＝ 10<sup>-14</sup> / 10<sup>-3</sup> ＝ 10<sup>-11</sup><br>
             　[OH<sup>-</sup>] ＝ <span class="cloze" style="color:var(--chalk-yellow); font-weight:bold;">√(<i>c</i> · <i>K</i><sub>h</sub>) ＝ √(0.1 × 10<sup>-11</sup>) ＝ 10<sup>-6</sup> M</span> (pOH＝6, pH＝8)
           </div>
         </div>
 
-        <div class="reaction-box" style="border-left: 3px solid var(--chalk-green);">
-          <div class="sub-head" style="color:var(--chalk-green);">3. 計算 0.1 M CH<sub>3</sub>COONa 的 pH</div>
+        <div class="reaction-box" style="border-left: 3px solid var(--chalk-cyan);">
+          <div class="sub-head" style="color:var(--chalk-cyan);">3. 計算 0.1 M CH<sub>3</sub>COONa 的 pH</div>
           <div style="font-size: 0.78rem; line-height: 1.5;">
             • 已知 CH<sub>3</sub>COOH 之 <i>K</i><sub>a</sub> ＝ 10<sup>-5</sup>。<br>
             • <b>計算 [OH<sup>-</sup>] 與 pH</b>：<br>
@@ -544,13 +548,13 @@
         </div>
 
         <!-- 2. 判斷酸鹼性與第一段水解主導 -->
-        <div class="reaction-box" style="border-left: 3px solid var(--chalk-green); letter-spacing:-0.3px;">
-          <div class="sub-head" style="color:var(--chalk-green);">
+        <div class="reaction-box" style="border-left: 3px solid var(--chalk-cyan); letter-spacing:-0.3px;">
+          <div class="sub-head" style="color:var(--chalk-cyan);">
             1. 判斷鹼性與水解主導
           </div>
           <div style="font-size:0.78rem; line-height:1.5;">
             • Na<sub>2</sub>CO<sub>3</sub> 拆解：2Na<sup>＋</sup> ＋ CO<sub>3</sub><sup>2-</sup><br>
-            • CO<sub>3</sub><sup>2-</sup> 為極弱酸 HCO<sub>3</sub><sup>-</sup> 之共軛鹼，發生顯著水解呈現<span style="color:var(--chalk-orange); font-weight:bold;">強烈鹼性</span>。<br>
+            • CO<sub>3</sub><sup>2-</sup> 為極弱酸 HCO<sub>3</sub><sup>-</sup> 之共軛鹼，發生顯著水解呈現<span style="color:var(--chalk-cyan); font-weight:bold;">強烈鹼性</span>。<br>
             • <b>水解方程式（第 1 段）</b>：<br>
             <div style="text-align:center; color:var(--chalk-yellow); margin:3px 0; font-weight:bold;">
               CO<sub>3</sub><sup>2-</sup> ＋ H<sub>2</sub>O ⇌ HCO<sub>3</sub><sup>-</sup> ＋ OH<sup>－</sup> , <i>K</i><sub>b1</sub>
@@ -566,7 +570,7 @@
           <div class="sub-head" style="color:var(--chalk-cyan);">2. 計算 [OH<sup>-</sup>] 與 pH</div>
           <div style="font-size:0.79rem; line-height:1.5; letter-spacing:-0.3px;">
             • 代入鹼性鹽水解公式：<br>
-            <div class="chem-eq-hero" style="font-size:0.75rem; color:var(--chalk-green); margin:3px 0; font-family:monospace; text-align:left; padding:5px 8px;">
+            <div class="chem-eq-hero" style="font-size:0.75rem; color:var(--chalk-cyan); margin:3px 0; font-family:monospace; text-align:left; padding:5px 8px;">
               [OH<sup>-</sup>] ＝ √(<i>c</i> · <i>K</i><sub>b1</sub>)<br>
               　   ＝ √(0.1 × 10<sup>-3</sup>)<br>
               　   ＝ √(10<sup>-4</sup>) ＝ <span style="color:var(--chalk-yellow); font-weight:bold;">10<sup>-2</sup> M</span>
@@ -599,8 +603,8 @@
         </div>
 
         <!-- 2. HS- 的雙重身份（兩性離子競逐） -->
-        <div class="reaction-box" style="border-left: 3px solid var(--chalk-orange); letter-spacing:-0.3px;">
-          <div class="sub-head" style="color:var(--chalk-orange);">
+        <div class="reaction-box" style="border-left: 3px solid var(--chalk-cyan); letter-spacing:-0.3px;">
+          <div class="sub-head" style="color:var(--chalk-cyan);">
             1. HS<sup>－</sup> 的雙重身份（競逐反應）
           </div>
           <div style="font-size:0.78rem; line-height:1.5;">
@@ -614,12 +618,12 @@
         </div>
 
         <!-- 3. 比較 Ka2 與 Kh 大小決定酸鹼性 -->
-        <div class="section-box" style="border-left-color: var(--chalk-green);">
-          <div class="sub-head" style="color:var(--chalk-green);">2. 比較 <i>K</i><sub>a2</sub> 與 <i>K</i><sub>h</sub> 決定最終酸鹼性</div>
+        <div class="section-box" style="border-left-color: var(--chalk-cyan);">
+          <div class="sub-head" style="color:var(--chalk-cyan);">2. 比較 <i>K</i><sub>a2</sub> 與 <i>K</i><sub>h</sub> 決定最終酸鹼性</div>
           <div style="font-size:0.79rem; line-height:1.5; letter-spacing:-0.3px;">
             • 比較兩者常數大小：<br>
             　<i>K</i><sub>h</sub> (10<sup>-7</sup>) <b>＞</b> <i>K</i><sub>a2</sub> (10<sup>-14</sup>)<br>
-            • <b>結論</b>：水解傾向遠大於解離傾向，故 NaHS 水溶液呈現<span style="color:var(--chalk-orange); font-weight:bold;">微鹼性</span>。<br>
+            • <b>結論</b>：水解傾向遠大於解離傾向，故 NaHS 水溶液呈現<span style="color:var(--chalk-cyan); font-weight:bold;">微鹼性</span>。<br>
             • <b>精確 [H<sup>+</sup>] 公式推導</b>：<br>
             <div class="chem-eq-hero" style="font-size:0.75rem; color:var(--chalk-cyan); margin:3px 0; font-family:monospace; text-align:left; padding:5px 8px;">
               [H<sup>+</sup>] ＝ <span class="cloze" style="color:var(--chalk-yellow); font-weight:bold;">√(<i>K</i><sub>a1</sub> · <i>K</i><sub>a2</sub>)</span><br>
@@ -638,7 +642,7 @@
 
     <!-- 頁尾版權 -->
     <div class="footer">
-      <div>展氏新解 · 鹽類的酸鹼性與水解計算特訓</div>
+      <div>展氏新解 · 鹽類的酸鹼性與水解計算</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
         👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">168</span> 次
